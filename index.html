@@ -7,11 +7,11 @@
       var firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-      function drawPlayer(elementId, videoId){
+      function drawPlayer(elementId, videoId, width, height){
           var player = new YT.Player(elementId, {
                   videoId: videoId,
-                  height: '270',
-                  width: '480',
+                  height: height,
+                  width: width,
                   playerVars: {
                       modestbranding: 0,
                       autoplay: 1,
@@ -34,7 +34,7 @@
             var remains=YTP.getDuration() - YTP.getCurrentTime();
             if(window[elementId])
               clearTimeout(window[elementId]);
-            this.rewindTO=setTimeout(function(){
+            window[elementId]=setTimeout(function(){
               YTP.seekTo(0);
             },(remains-0.1)*1000);
           }
@@ -45,12 +45,12 @@
     }
 
     function onYouTubeIframeAPIReady() {
-      drawPlayer("player1",'3ipdcD5zrPQ');
-      drawPlayer("player2",'sZUqeyk79lY');
-      drawPlayer("player3",'7ZLb3ATK8TA');
-      drawPlayer("player4",'RrPm56jFQE8');
-      drawPlayer("teaser1-original",'xtrRrclmZTI');
-      drawPlayer("teaser1-duplicate",'-pDFbD-smmQ');
+      drawPlayer("player1",'3ipdcD5zrPQ', '320', '180');
+      drawPlayer("player2",'sZUqeyk79lY', '320', '180');
+      drawPlayer("player3",'7ZLb3ATK8TA', '320', '180');
+      drawPlayer("player4",'RrPm56jFQE8', '320', '180');
+      drawPlayer("teaser1-original",'xtrRrclmZTI', '480', '270');
+      drawPlayer("teaser1-duplicate",'-pDFbD-smmQ' ,'480', '270');
 //       drawPlayer("teaser2-original",'RrPm56jFQE8');
 //       drawPlayer("teaser2-shift",'RrPm56jFQE8');
     }
@@ -209,6 +209,7 @@
             </em>  </p>
           </blockquote>
         </div>
+        <p class="section" id="citation">Citation</p>
 
 
       </body></html>
