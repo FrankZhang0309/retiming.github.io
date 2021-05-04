@@ -7,14 +7,14 @@
       var firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-      function drawPlayer(elementId, videoId, width, height, autoplay){
+      function drawPlayer(elementId, videoId, width, height, autoplayid){
           var player = new YT.Player(elementId, {
                   videoId: videoId,
                   height: height,
                   width: width,
                   playerVars: {
                       modestbranding: 0,
-                      'autoplay': autoplay,
+                      autoplay: autoplayid,
                       controls: 0,
                       showinfo: 0,
                       wmode: 'transparent',
