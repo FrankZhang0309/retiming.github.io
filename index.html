@@ -175,6 +175,7 @@
             -->
 
           </tbody></table>
+          <!-- Abstract section -->
           <p><span class="section">Abstract</span> </p>
           <p>
           Generating free-viewpoint videos is critical for immersive VR/AR experience but recent neural advances still lack the editing ability to manipulate the visual perception for large dynamic scenes. To fill this gap, in this paper we propose the first approach for editable photo-realistic free-viewpoint video generation for large-scale dynamic scenes using only sparse 16 cameras. The core of our approach is a new layered neural representation, where each dynamic entity including the environment itself is formulated into a space-time coherent neural layered radiance representation called ST-NeRF. Such layered representation supports fully perception and realistic manipulation of the dynamic scene whilst still supporting a free viewing experience in a wide range. In our ST-NeRF, the dynamic entity/layer is represented as continuous functions, which achieves the disentanglement of location, deformation as well as the appearance of the dynamic entity in a continuous and self-supervised manner. We propose a scene parsing 4D label map tracking to disentangle the spatial information explicitly, and a continuous deform module to disentangle the temporal motion implicitly. An object-aware volume rendering scheme is further introduced for the re-assembling of all the neural layers. We adopt a novel layered loss and motion-aware ray sampling strategy to enable efficient training for a large dynamic scene with multiple performers, Our framework further enables a variety of editing functions, i.e., manipulating the scale and location, duplicating or retiming individual neural layers to create numerous visual effects while preserving high realism. Extensive experiments demonstrate the effectiveness of our approach to achieve high-quality, photo-realistic, and editable free-viewpoint video generation for dynamic scenes.
@@ -188,32 +189,8 @@
             </tbody>
           </table>
           <p> A higher quality video is available at: <a target="_blank" href="https://www.bilibili.com/video/BV1e84y1F7YT">Bilibili</a>.</p>
-          <p class="section" id="paper">Paper</p>
-          <table width="940" border="0">
-            <tbody>
-              <tr>
-                <td height="100"><a href="https://arxiv.org/pdf/2104.14786.pdf"><img src="./assets/preview.png" alt="" width="140" height="167"></a></td>
-                <td width="750"><p><b>Editable Free-Viewpoint Video using a Layered Neural Representation</b><br>
-                  Jiakai Zhang, Xinhang Liu, Xinyi Ye, Fuqiang Zhao, Yanshun Zhang, Minye Wu, Yingliang Zhang, Lan Xu and Jingyi Yu<br>
-                  <em>Accepted at SIGGRAPH 2021.</em><br><br>
-                  [<a href="https://arxiv.org/pdf/2104.14786.pdf">paper</a>]</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-         <p class="section" id="code">Code</p>
-          <table border="0">
-            <tbody>
-              <tr>
-                <td width="80"><a href="https://github.com/google/retiming"><img src="./assets/github_logo.png" alt="" height="50"></a></td>
-                <td align="left">
-                  <!--<p>[<a href="https://github.com/google/retiming">code</a>]</p> -->
-                  Coming soon with the dataset.
-                </td>
-              </tr>
-            </tbody>
-          </table>
           <p>&nbsp;</p>
+          <!-- additional results section -->
           <p><span class="section">Additional Results</span> </p>
           <table width="940" height="540" border="0" align="center" id="video">
             <tbody>
@@ -234,7 +211,34 @@
               The authors would like to thank Xin Chen, Dali Gao from DGene Digital Technology Co., Ltd. for processing the dataset and figures. Besides, we thank Boyuan Zhang from ShanghaiTech University for producing a supplementary video and  Yingwenqi Jiang, Wenman Hu, and Jiajie Yang for collecting the dataset as performers. Finally, we thank the performers in ShanghaiTech University New Year Party 2021. This work was supported by NSFC programs (61976138, 61977047), the National Key Research and Development Program (2018YFB2100500), STCSM (2015F0203-000-06) and SHMEC (2019-01-07-00-01-E00003).
             </p>
           </blockquote>
-      
+        <!-- paper section -->
+        <p class="section" id="paper">Paper</p>
+          <table width="940" border="0">
+            <tbody>
+              <tr>
+                <td height="100"><a href="https://arxiv.org/pdf/2104.14786.pdf"><img src="./assets/preview.png" alt="" width="140" height="167"></a></td>
+                <td width="750"><p><b>Editable Free-Viewpoint Video using a Layered Neural Representation</b><br>
+                  Jiakai Zhang, Xinhang Liu, Xinyi Ye, Fuqiang Zhao, Yanshun Zhang, Minye Wu, Yingliang Zhang, Lan Xu and Jingyi Yu<br>
+                  <em>Accepted at SIGGRAPH 2021.</em><br><br>
+                  [<a href="https://arxiv.org/pdf/2104.14786.pdf">paper</a>]</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+         <!-- code section -->
+         <p class="section" id="code">Code</p>
+          <table border="0">
+            <tbody>
+              <tr>
+                <td width="80"><a href="https://github.com/google/retiming"><img src="./assets/github_logo.png" alt="" height="50"></a></td>
+                <td align="left">
+                  <!--<p>[<a href="https://github.com/google/retiming">code</a>]</p> -->
+                  Coming soon with the dataset.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        <!-- citation section-->
         <p><span class="section">Citation</span> </p>
       <pre> 
         @inproceedings{zhang2021stnerf,
