@@ -7,14 +7,14 @@
       var firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-      function drawPlayer(elementId, videoId, width, height){
+      function drawPlayer(elementId, videoId, width, height, autoplay){
           var player = new YT.Player(elementId, {
                   videoId: videoId,
                   height: height,
                   width: width,
                   playerVars: {
                       modestbranding: 0,
-                      autoplay: 1,
+                      autoplay: autoplay,
                       controls: 0,
                       showinfo: 0,
                       wmode: 'transparent',
@@ -28,6 +28,7 @@
                       'onStateChange': onStateChange
                   }
               });
+          player.setPlaybackQuality('hd1080')
         function onStateChange(event) {
           var YTP=event.target;
           if(event.data===1){
@@ -45,12 +46,15 @@
     }
 
     function onYouTubeIframeAPIReady() {
-      drawPlayer("player1",'3ipdcD5zrPQ', '480', '270');
-      drawPlayer("player2",'sZUqeyk79lY', '320', '180');
-      drawPlayer("player3",'7ZLb3ATK8TA', '320', '180');
-      drawPlayer("player4",'RrPm56jFQE8', '320', '180');
-      drawPlayer("teaser1-original",'xtrRrclmZTI', '480', '270');
-      drawPlayer("teaser1-duplicate",'-pDFbD-smmQ' ,'480', '270');
+      drawPlayer("player1",'3ipdcD5zrPQ', '480', '270', 1);
+      drawPlayer("player2",'sZUqeyk79lY', '320', '180', 1);
+      drawPlayer("player3",'7ZLb3ATK8TA', '320', '180', 1);
+      drawPlayer("player4",'RrPm56jFQE8', '320', '180', 1);
+      drawPlayer("teaser1-original",'xtrRrclmZTI', '480', '270', 1);
+      drawPlayer("teaser1-duplicate",'-pDFbD-smmQ' ,'480', '270', 1);
+      drawPlayer("additional-1",'FDGnkyh_DA0' ,'720', '405', 0);
+      drawPlayer("additional-2",'jOjyL9Mvshg' ,'720', '405', 0);
+      drawPlayer("additional-3",'5jxEYDsJKVA' ,'720', '405', 0);
 //       drawPlayer("teaser2-original",'RrPm56jFQE8');
 //       drawPlayer("teaser2-shift",'RrPm56jFQE8');
     }
@@ -210,11 +214,25 @@
             </tbody>
           </table>
           <p>&nbsp;</p>
-          <blockquote>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p><em><b>Acknowledgements. </b>The authors would like to thank Xin Chen, Dali Gao from DGene Digital Technology Co., Ltd. for processing the dataset and figures. Besides, we thank Boyuan Zhang from ShanghaiTech University for producing a supplementary video and  Yingwenqi Jiang, Wenman Hu, and Jiajie Yang for collecting the dataset as performers. Finally, we thank the performers in ShanghaiTech University New Year Party 2021. This work was supported by NSFC programs (61976138, 61977047), the National Key Research and Development Program (2018YFB2100500), STCSM (2015F0203-000-06) and SHMEC (2019-01-07-00-01-E00003).
-            </em>  </p>
+          <p><span class="section">Additional Results</span> </p>
+          <table width="940" height="540" border="0" align="center" id="video">
+            <tbody>
+              <tr>
+                <td align="center"><div id="additional-1"></div></td>
+              </tr>
+              <tr>
+                <td align="center"><div id="additional-2"></div></td>
+              </tr>
+              <tr>
+                <td align="center"><div id="additional-3"></div></td>
+              </tr>
+            </tbody>
+          </table>
+      
+          <p><span class="section">Acknowledgements</span> </p>
+            <p>
+              The authors would like to thank Xin Chen, Dali Gao from DGene Digital Technology Co., Ltd. for processing the dataset and figures. Besides, we thank Boyuan Zhang from ShanghaiTech University for producing a supplementary video and  Yingwenqi Jiang, Wenman Hu, and Jiajie Yang for collecting the dataset as performers. Finally, we thank the performers in ShanghaiTech University New Year Party 2021. This work was supported by NSFC programs (61976138, 61977047), the National Key Research and Development Program (2018YFB2100500), STCSM (2015F0203-000-06) and SHMEC (2019-01-07-00-01-E00003).
+            </p>
           </blockquote>
       
         <p><span class="section">Citation</span> </p>
