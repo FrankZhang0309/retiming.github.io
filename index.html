@@ -10,6 +10,8 @@
       function drawPlayer(elementId, videoId){
           var player = new YT.Player(elementId, {
                   videoId: videoId,
+                  height: '270',
+                  width: '480',
                   playerVars: {
                       modestbranding: 0,
                       autoplay: 1,
@@ -19,9 +21,7 @@
                       branding: 0,
                       rel: 0,
                       autohide: 0,
-                      origin: window.location.origin,
-                      width: 480,
-                      height: 270
+                      origin: window.location.origin
                   },
                   events: {
                       'onReady': onPlayerReady,
